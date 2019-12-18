@@ -14,13 +14,21 @@ Python script verified working on RHEL 5/6/7 and Fedora 12-28.
 
 Selecting the classification window and pressing the ESC key
 will temporarily hide the window for 15 seconds, it will return
-to view after that
+to view after that.
 
 Installation
 ============
 To install directly from source, run the following command:
 ```sh
 python setup.py install
+```
+
+Ubuntu Installation
+===================
+To install for Ubuntu 16.04 LTS or higher, ensure that you install
+the required packages by running the following command in Terminal:
+```sh
+$ sudo apt install -y python-setuptools python-gtk2-dev
 ```
 
 Classification Banner Usage
@@ -155,3 +163,32 @@ vi /etc/xdg/autostart/classification-banner.desktop
      StartupNotify=false
      Terminal=false
 ```
+
+Autostart - Ubuntu 16.04 LTS or higher
+======================================
+
+To auto-start the classification-banner script on the GNOME Desktop in
+Ubuntu 16.04 LTS, run the following command to create the desktop file:
+
+```sh
+$ sudo nano /etc/xdg/autostart/classification-banner.desktop
+```
+
+In the Nano editor, type in the following:
+
+```sh
+     [Desktop Entry]
+     Name=Classification Banner
+     Exec=/usr/local/bin/classification-banner
+     Comment=User Notification for Security Level of System.
+     Type=Application
+     Encoding=UTF-8
+     Version=1.0
+     MimeType=application/python;
+     Categories=Utility;
+     X-GNOME-Autostart-enabled=true
+     StartupNotify=false
+     Terminal=false
+```
+
+Finally, to save the file press <kbd>Ctrl</kbd>+<kbd>O</kbd>; to exit Nano, press <kbd>Ctrl</kbd>+<kbd>X</kbd>.
