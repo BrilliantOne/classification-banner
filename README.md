@@ -23,8 +23,8 @@ To install directly from source, run the following command:
 python setup.py install
 ```
 
-Ubuntu Installation
-===================
+Installation - Ubuntu 16.04 LTS or Higher
+=========================================
 To install for Ubuntu 16.04 LTS or higher, ensure that you install
 the required packages by running the following command in Terminal:
 ```sh
@@ -177,18 +177,20 @@ $ sudo nano /etc/xdg/autostart/classification-banner.desktop
 In the Nano editor, type in the following:
 
 ```sh
-     [Desktop Entry]
-     Name=Classification Banner
-     Exec=/usr/local/bin/classification-banner
-     Comment=User Notification for Security Level of System.
-     Type=Application
-     Encoding=UTF-8
-     Version=1.0
-     MimeType=application/python;
-     Categories=Utility;
-     X-GNOME-Autostart-enabled=true
-     StartupNotify=false
-     Terminal=false
+[Desktop Entry]
+Name=Classification Banner
+Exec=/usr/local/bin/classification-banner
+Comment=User Notification for Security Level of System.
+Type=Application
+Encoding=UTF-8
+Version=1.0
+MimeType=application/python;
+Categories=Utility;
+X-GNOME-Autostart-enabled=true
+StartupNotify=false
+Terminal=false
 ```
 
 Finally, to save the file press <kbd>Ctrl</kbd>+<kbd>O</kbd>; to exit Nano, press <kbd>Ctrl</kbd>+<kbd>X</kbd>.
+
+Now restart the computer, after logging in, you will see the banner displayed.
